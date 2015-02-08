@@ -1,0 +1,28 @@
+# *.dll
+LibXIEncoder.dll
+LibXIProperty.dll
+LibXIPropertyA.dll
+LibXIProtocol.dll
+LibXIStream2.dll
+LibXIStreamA2.dll
+
+# Dev-C++ files
+Makefile.win
+XIViewer.layout
+XIViewer_private.rc
+XIViewer_private.h
+XIViewer_private.res
+bufferTest.layout
+test.layout
+
+# objects and executables
+XIPropertyTest.exe
+XIPropertyTest.o
+XIViewer.exe
+buffer.o
+bufferTest.exe
+bufferTest.o
+main.o
+prim_YUV_opt.o
+test.exe
+test.o
