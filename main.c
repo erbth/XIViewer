@@ -185,7 +185,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 					}
 					
 					if (!XIS_ResetVideoRenderer (input.videoRenderer, &monGUID, hwnd,
-						XI_COLOR_RGB32, input.width, input.height, TRUE, TRUE))
+						XI_COLOR_RGB32, input.width, input.height, FALSE, TRUE))
 					{
 						PostQuitMessage (ERROR_RESET_RENDERER);
 						break;
@@ -271,7 +271,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 				}
 				
 				if (!XIS_ResetVideoRenderer (input.videoRenderer, &monGUID, hwnd,
-					XI_COLOR_RGB32, input.width, input.height, TRUE, TRUE))
+					XI_COLOR_RGB32, input.width, input.height, FALSE, TRUE))
 				{
 					PostQuitMessage (ERROR_RESET_RENDERER);
 					break;
@@ -674,7 +674,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 		goto theEnd;
 	}
 	
-    input.videoRenderer = XIS_CreateVideoRenderer (&input.outputGUID, hwnd, XI_COLOR_RGB32, 768, 576, TRUE, TRUE);
+    input.videoRenderer = XIS_CreateVideoRenderer (&input.outputGUID, hwnd, XI_COLOR_RGB32, 768, 576, FALSE, TRUE);
     if (!input.videoRenderer)
     {
 		MessageBoxA (hwnd, "could not create XIStream VideoRenderer.", "error", MB_OK | MB_ICONEXCLAMATION);
